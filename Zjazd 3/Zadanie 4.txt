@@ -1,0 +1,24 @@
+<?php
+
+$file = "ip_list.txt";
+$user_ip = $_SERVER['REMOTE_ADDR'];
+
+$allowed_ips = array();
+if ($handle = fopen($file, "r")) {
+    while (!feof($handle)) {
+        $ip = trim(fgets($handle));
+        if (!empty($ip)) {
+            $allowed_ips[] = $ip;
+        }
+    }
+    fclose($handle);
+}
+
+if (in_array($user_ip, $allowed_ips)) {
+    include('Zadanie1.php');
+} else {
+    include('Zadanie2.php');
+}
+?>
+
+

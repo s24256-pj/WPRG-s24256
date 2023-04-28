@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form method="post" enctype="multipart/form-data">
+    <label>Wybierz plik tekstowy:</label>
+    <input type="file" name="file"><br><br>
+    <input type="submit" name="submit" value="Odwróæ kolejnoœæ wierszy">
+</form>
+
+<?php
+if(isset($_POST['submit'])){
+    $file = $_FILES['file'];
+    $file_name = $file['name'];
+    $file_tmp = $file['tmp_name'];
+
+    $lines = file($file_tmp);
+
+    $lines = array_reverse($lines);
+
+    $file = fopen($file_tmp, "w");
+    foreach ($lines as $line) {
+        fwrite($file, $line);
+    }
+    echo "<pre>" . file_get_contents($file_tmp) . "</pre>";
+    fclose($file);
+
+    echo "<p>Plik $file_name zosta³‚ przetworzony. Kolejnoœæ wierszy zosta³a obrócona.</p>";
+}
+?>
+</body>
+</html>

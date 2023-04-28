@@ -1,0 +1,15 @@
+<?php
+$file = fopen("Zadanie3.txt", "r") or die("Nie mo¿na otworzyæ pliku!");
+echo "<ul>";
+
+while(!feof($file)) {
+    $line = fgets($file);
+    $link_info = explode(";", $line);
+    $url = trim($link_info[0]);
+    $description = trim($link_info[1]);
+    echo "<li><a href=\"$url\">$description</a></li>";
+}
+
+echo "</ul>";
+fclose($file);
+?>
