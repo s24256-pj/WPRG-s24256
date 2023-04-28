@@ -1,5 +1,5 @@
 <?php
-$file = fopen("Zadanie3.txt", "r") or die("Nie mo¿na otworzyæ pliku!");
+$file = fopen("linki.txt", "r") or die("Nie moÅ¼na otworzyÄ‡ pliku!");
 echo "<ul>";
 
 while(!feof($file)) {
