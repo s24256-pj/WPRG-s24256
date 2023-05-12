@@ -1,0 +1,18 @@
+<?php
+session_start();
+
+$odwiezenie = isset($_SERVER['HTTP_CACHE_CONTROL']) && $_SERVER['HTTP_CACHE_CONTROL'] === 'max-age=0';
+$nazwa_sesji = "visit";
+
+if(!isset($_SESSION[$nazwa_sesji])){
+    $_SESSION[$nazwa_sesji] += 1;
+    echo $_SESSION[$nazwa_sesji];
+}
+else if($odwiezenie){
+    echo $_SESSION[$nazwa_sesji];
+}
+else{
+    $_SESSION[$nazwa_sesji] += 1;
+    echo $_SESSION[$nazwa_sesji];
+}
+?>

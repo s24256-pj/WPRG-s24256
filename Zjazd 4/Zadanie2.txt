@@ -1,0 +1,14 @@
+<?php
+$licznik_cookie = "licznik_cookie";
+
+if(isset($_COOKIE[$licznik_cookie])) {
+$licznik = $_COOKIE[$licznik_cookie];
+} else {
+$licznik = 1;
+}
+
+$licznik=$licznik+1;
+setcookie($licznik_cookie, $licznik, time() + 60*60*24*365, "/");
+
+echo "Liczba odwiedzin: " . $licznik;
+?>

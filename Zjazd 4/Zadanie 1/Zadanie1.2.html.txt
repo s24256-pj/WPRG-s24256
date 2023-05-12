@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+<fieldset>
+  <form method="post">
+  <label for="imie<?php echo $i; ?>">Imię:</label>
+  <input type="text" id="imie<?php echo $i; ?>" name="imie<?php echo $i; ?>" required>
+  <br>
+  <label for="nazwisko<?php echo $i; ?>">Nazwisko:</label>
+  <input type="text" id="nazwisko<?php echo $i; ?>" name="nazwisko<?php echo $i; ?>" required>
+  <br>
+  <label for="email<?php echo $i; ?>">E-mail:</label>
+  <input type="email" id="email<?php echo $i; ?>" name="email<?php echo $i; ?>" required>
+  <br>
+    <input type="submit" value="ZATWIERDŹ OSOBE">
+  </form>
+</fieldset>
+</body>
+</html>
