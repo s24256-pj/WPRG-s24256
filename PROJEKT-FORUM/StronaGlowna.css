@@ -1,0 +1,128 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E9BECA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin:0;
+}
+
+header {
+    background-color: #F198B1;
+    width: 100%;
+    margin:0;
+    height: 90px;
+    padding: 5px;
+    text-align: center;
+    color: #393636;
+}
+
+input[type="submit"]  {
+    border-radius: 20px;
+    background-color: #F2799B;
+    color: white;
+    padding: 10px 20px;
+    border: 1px solid #F3668E;
+    font-size: 12px;
+}
+
+.post-container {
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.comennt-cointaner {
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #F3668E;
+    padding: 10px;
+    margin-bottom: 5px;
+    width: 500px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container {
+    border-radius: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 10px;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container h2{
+    color: #F2799B;
+}
+
+.post-container h2 {
+    color: #F2799B;
+    margin-bottom: 0;
+    text-transform: uppercase;
+
+}
+
+.rejestracja{
+    color:white;
+    font-size: 10px;
+    margin-top: 0;
+}
+
+.autor{
+    margin-right: 0;
+    margin-top:-20px;
+    text-align:right;
+    color:#F2799B;
+    font-size:12px
+}
+
+.daty {
+    color:darkgrey;
+    font-size: 10px;
+    margin-top: 0;
+}
+
+.tresc{
+    margin-top:0px;
+    color:#F2799B;
+}
+
+.post-container a{
+    color:#F2799B;
+}
+
+.inputtresc {
+    height: 200px;
+}
+.szare{
+    color:#393636;
+}
+
+.tytul{
+    margin-bottom:3px;
+    margin-top: 2px;
+    color:#F2799B;
+}
+
+.right {
+    float: right;
+}
+
+.left{
+    float:left;
+    margin-left: 0px;
+}
+
